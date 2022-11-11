@@ -23,6 +23,7 @@ public class Main {
         Player player2= new Player();
         player2.setName(player2name);
 
+        // welcome the players and provide instructions on the game
         System.out.println( "Welcome players " + player1.getName() + " and " + player2.getName() + "!");
         System.out.println( "The goal of this game is to accumulate a player score of exactly 30. The first player " +
                 "to score exactly 30 is the Winner!");
@@ -35,8 +36,12 @@ public class Main {
                     "you accumulate a score of exactly 30.\n");
         }
         System.out.println("Here we go!");
-        int total; //total of dice value
+        int total;
+        
+        // establishing the loop to stop once someone wins with a score of 30
         while (player1.getScore() != 30 && player2.getScore() != 30) {
+            
+            // player 1 turn and score validation
             System.out.println("Player " + player1.getName() + ", it is your turn!");
             System.out.println("Your score: " + player1.getScore());
             roll();
@@ -54,6 +59,7 @@ public class Main {
             }
             System.out.println("----------------------------------------");
 
+            // player 2 turn and score validation
             System.out.println("Player " + player2.getName() + ", it is your turn!");
             System.out.println("Your score: " + player2.getScore());
             roll();
@@ -85,6 +91,7 @@ public class Main {
             System.out.println("Do you wish to (1) Keep die 1, (2) Keep die 2, (3) Keep the total? (Respond with 1 or 2 or 3): ");
             Scanner input = new Scanner(System.in);
             int keep = input.nextInt();
+            // ensuring valid selection was entered for option to keep dice
             if (keep == 1) {
                 validChoice = true;
                 output = dice1;
