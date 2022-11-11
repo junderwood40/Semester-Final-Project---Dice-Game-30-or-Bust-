@@ -12,9 +12,8 @@ Your code should allow for two players.
  - The first player's name and starting score of zero should be displayed. 
  
 The game should roll two dice for the player and display the face value of each die and the total value of both dice. The first player is then required to pick the face value of one of the dice or the total value of both dice. This value is added to that player's score. The new player score is displayed.
+ - If the player's score is less than 30, the turn is passed to the other player.
 
-If the player's score is less than 30, the turn is passed to the other player.
+ - If the player's score is greater than 30, then the player score is reset to zero and the turn is passed to the other player.
 
-If the player's score is greater than 30, then the player score is reset to zero and the turn is passed to the other player.
-
-If the player's score is exactly 30, then that player is declared the winner.
+ - If the player's score is exactly 30, then that player is declared the winner.
